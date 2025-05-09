@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Page() {
   return (
     <section className="flex flex-col items-center justify-center w-full h-full px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
-      <p className="mb-8 text-4xl font-medium tracking-tight">
+      <p className="mb-8 text-6xl font-bold tracking-tight">
         hehe
       </p>
     </section>
