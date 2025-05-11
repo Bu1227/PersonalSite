@@ -1,73 +1,46 @@
+import avatar from "@/public/avatar.jpg";
 import Image from "next/image";
-// import { socialLinks } from "./config";
 
 export default function Page() {
   return (
-    <section className="flex flex-col items-center justify-center w-full h-full px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
-      <p className="mb-8 text-6xl font-bold tracking-tight">
-        hehe
-      </p>
+    <section className="flex flex-col items-center justify-center w-full h-full px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:flex-row">
+      {/* 左側文字區塊 */}
+      <div className="flex flex-col items-start justify-center w-full mb-8 lg:w-1/2 lg:mb-0">
+        <h1 className="mb-4 text-6xl font-bold tracking-tight text-left">
+          Welcome to My Personal Site
+        </h1>
+        <p className="mb-8 text-xl text-left text-gray-600">
+          Hi, I'm Bu!
+        </p>
+        <div className="flex space-x-4">
+          <a
+            href="#"
+            className="px-4 py-2 text-white bg-gray-800 rounded hover:bg-gray-900"
+          >
+            GitHub
+          </a>
+          <a
+            href="#"
+            className="px-4 py-2 text-white bg-pink-500 rounded hover:bg-pink-600"
+          >
+            Twitter
+          </a>
+        </div>
+      </div>
+
+      {/* 右側圖片區塊 */}
+      <div className="flex items-center justify-center w-full lg:w-1/2">
+        <div className="relative w-64 h-64 bg-gray-200 rounded-lg">
+          {/* 替換為您的圖片 */}
+          <Image
+            src={avatar} // 確保這個路徑是正確的
+            alt="Personal Image"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
+          />
+        </div>
+      </div>
     </section>
-    // <section>
-    //   <a href={socialLinks.twitter} target="_blank">
-    //     <Image
-    //       src="/profile.png"
-    //       alt="Profile photo"
-    //       className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0"
-    //       unoptimized
-    //       width={160}
-    //       height={160}
-    //       priority
-    //     />
-    //   </a>
-
-    //   <h1 className="mb-8 text-2xl font-medium tracking-tight">
-    //     Portfolio, made simple!
-    //   </h1>
-
-    //   <div className="prose prose-neutral dark:prose-invert">
-    //     <p>
-    //       A clean, fast, and lightweight portfolio template built with Next.js,
-    //       Vercel, and Tailwind CSS for optimal performance.
-    //     </p>
-    //     <p>
-    //       Nextfolio includes all the essentials for a stunning portfolio: SEO,
-    //       MDX support, RSS, Atom, & JSON feeds, analytics, tweet & YouTube
-    //       embeds, KaTeX integration, and{" "}
-    //       <a
-    //         target="_blank"
-    //         href="https://github.com/1msirius/Nextfolio?tab=readme-ov-file#features"
-    //       >
-    //         more
-    //       </a>
-    //       .
-    //     </p>
-    //     <p>
-    //       Nextfolio is{" "}
-    //       <a href={socialLinks.github} target="_blank">
-    //         open-source
-    //       </a>{" "}
-    //       and fully customizable, making it easy to add more features.
-    //     </p>
-    //     <p>
-    //       <a
-    //         href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio"
-    //         target="_blank"
-    //       >
-    //         Deploy
-    //       </a>{" "}
-    //       your Nextfolio site with Vercel in minutes and follow the set up
-    //       instructions in the{" "}
-    //       <a href="/blog/getting-started">Getting Started</a> post.
-    //     </p>
-    //     <p>
-    //       Built and maintained by{" "}
-    //       <a href="https://imsirius.xyz/" target="_blank">
-    //         Sirius
-    //       </a>
-    //       .
-    //     </p>
-    //   </div>
-    // </section>
   );
 }
